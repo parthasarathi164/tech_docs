@@ -205,17 +205,17 @@ void calculate_orientation() {
 }
 ```
 
-### **Step 7: Implement OLED Display Driver**
+### ~~**Step 7: Implement OLED Display Driver**~~
 
-Use existing SSD1306 libraries or create your own:[^7][^30][^6]
+~~Use existing SSD1306 libraries or create your own:[^7][^30][^6]~~
 
-**Display Library Setup:**[^6]
+~~**Display Library Setup:**[^6]~~
 
-1. Add SSD1306 library files to your project
-2. Initialize I2C communication
-3. Initialize display with correct I2C address (typically 0x3C or 0x78)
-4. Clear display buffer
-5. Set text size and cursor position
+1. ~~Add SSD1306 library files to your project~~
+2. ~~Initialize I2C communication~~
+3. ~~Initialize display with correct I2C address (typically 0x3C or 0x78)~~
+4. ~~Clear display buffer~~
+5. ~~Set text size and cursor position~~
 
 ### **Step 8: Create Turn Coordinator Graphics**
 

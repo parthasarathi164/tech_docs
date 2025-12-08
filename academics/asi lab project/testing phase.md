@@ -29,7 +29,9 @@
 
 1. **STM32 Replaces the Simulator:** Your STM32 board becomes the "brain." Its job is to read raw data from the MPU6050 (via I2C), process it (using a filter like a Kalman filter) to get stable pitch and roll angles, and read any other sensors you have (like a barometer for altitude).
 
->note: A **Kalman filter** is an algorithm that uses a series of noisy measurements over time to produce optimal estimates of a system's underlying state
+>note: I2C (Inter-Integrated Circuit) is a synchronous serial communication protocol used to connect microcontrollers to peripherals like sensors and memory chips over short distances. It uses only two wires—[SDA](https://www.google.com/search?q=SDA&rlz=1C1ONGR_enIN1187IN1187&oq=what+is+i2&gs_lcrp=EgZjaHJvbWUqBwgBEAAYgAQyBggAEEUYOTIHCAEQABiABDIHCAIQABiABDIHCAMQABiABDIHCAQQABiABDIHCAUQABiABDIHCAYQABiABDIHCAcQABiABDIHCAgQABiABDIHCAkQABiABNIBCDM1ODlqMGo3qAIAsAIA&sourceid=chrome&ie=UTF-8&ved=2ahUKEwiBgtCKxZ-RAxWefvUHHde6ANcQgK4QegYIAQgAEAQ) (Serial Data) and [SCL](https://www.google.com/search?q=SCL&rlz=1C1ONGR_enIN1187IN1187&oq=what+is+i2&gs_lcrp=EgZjaHJvbWUqBwgBEAAYgAQyBggAEEUYOTIHCAEQABiABDIHCAIQABiABDIHCAMQABiABDIHCAQQABiABDIHCAUQABiABDIHCAYQABiABDIHCAcQABiABDIHCAgQABiABDIHCAkQABiABNIBCDM1ODlqMGo3qAIAsAIA&sourceid=chrome&ie=UTF-8&ved=2ahUKEwiBgtCKxZ-RAxWefvUHHde6ANcQgK4QegYIAQgAEAU) (Serial Clock)—simplifying connections, and is a multi-master, multi-slave system where a master device initiates communication.
+
+>note: A **Kalman filter** is an algorithm that uses a series of noisy measurements over time to produce optimal estimates of a system's underlying state.
 
 2. **Send Data over Serial (UART):** The STM32 formats this clean data into a simple string (e.g., `P:10.5,R:-3.2,A:1500\n`) and sends it out over its UART (Serial) port 20-30 times per second.
 
