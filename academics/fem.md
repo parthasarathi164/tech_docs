@@ -610,3 +610,169 @@ applied without making the section twist.
 5. **The beam is slender**, meaning its length is much greater than its cross-sectional dimensions.
 6. **Normal stresses due to bending dominate**, and **transverse shear stresses are negligible**.
 7. **The modulus of elasticity (E) is constant** over the entire beam.
+---
+## important questions for CIE 2
+
+1. complete derivation of Hermite shape function.
+2. derivation of elemental stiffness matrix for a beam element.
+3. numerical on beams and trusses (also on Hermite shape function).
+
+---
+## Derivation — Shape functions of a 1-D (Euler–Bernoulli) beam element (Hermite cubic)
+
+> Obsidian-ready Markdown. All math uses `$...$` or `$$...$$`.
+
+---
+
+### 1. Problem statement
+For an Euler–Bernoulli beam element of length $L$ aligned with the $x$–axis ($x\in[0,L]$), approximate the transverse displacement $u(x)$ with a cubic polynomial.  
+Nodal DOFs (use translation `$q$` and rotation `$\theta$`):
+- Node 1: $q_1,\;\theta_1 = u'(0)$  
+- Node 2: $q_2,\;\theta_2 = u'(L)$
+
+Interpolation form:
+$$
+u(x)=N_1(x)\,q_1 + N_2(x)\,\theta_1 + N_3(x)\,q_2 + N_4(x)\,\theta_2.
+$$
+
+---
+
+### 2. Choose approximation and apply nodal boundary conditions
+Assume
+$$
+u(x)=a_0 + a_1 x + a_2 x^2 + a_3 x^3,
+$$
+$$
+u'(x)=a_1 + 2a_2 x + 3a_3 x^2.
+$$
+
+Apply nodal conditions:
+
+1. $u(0)=a_0=q_1$
+2. $u'(0)=a_1=\theta_1$
+3. $u(L)=a_0 + a_1 L + a_2 L^2 + a_3 L^3 = q_2$  
+   Substitute known coefficients:
+   $$
+   a_2L^2 + a_3L^3 = q_2 - q_1 - \theta_1 L \tag{A}
+   $$
+4. $u'(L)=a_1 + 2a_2 L + 3a_3 L^2 = \theta_2$  
+   Substitute $a_1$:
+   $$
+   2a_2 L + 3a_3 L^2 = \theta_2 - \theta_1 \tag{B}
+   $$
+
+---
+
+### 3. Solve for $a_2$ and $a_3$
+Divide (A) by $L^2$ and (B) by $L$:
+$$
+a_2 + a_3 L = A = \frac{q_2 - q_1 - \theta_1 L}{L^2},
+$$
+$$
+2a_2 + 3a_3 L = B = \frac{\theta_2 - \theta_1}{L}.
+$$
+
+Subtract $2A$ from $B$:
+$$
+a_3 L = B - 2A.
+$$
+
+Solutions:
+$$
+a_3 = \frac{(\theta_1+\theta_2)L + 2(q_1-q_2)}{L^3},
+$$
+$$
+a_2 = \frac{3(q_2-q_1) - (2\theta_1+\theta_2)L}{L^2}.
+$$
+
+---
+
+### 4. Construct the Hermite shape functions
+Use the non-dimensional coordinate
+$$
+\xi = \frac{x}{L},\qquad \xi\in[0,1].
+$$
+
+Collect terms multiplying each nodal DOF to obtain:
+
+- Translation (displacement) at node 1:
+  $$
+  N_1(\xi)=1 - 3\xi^2 + 2\xi^3
+  $$
+
+- Rotation at node 1:
+  $$
+  N_2(\xi)=L(\xi - 2\xi^2 + \xi^3)
+  $$
+
+- Translation (displacement) at node 2:
+  $$
+  N_3(\xi)=3\xi^2 - 2\xi^3
+  $$
+
+- Rotation at node 2:
+  $$
+  N_4(\xi)=L(\xi^3 - \xi^2)
+  $$
+
+Thus,
+$$
+u(x)=N_1(\xi)\,q_1 + N_2(\xi)\,\theta_1 + N_3(\xi)\,q_2 + N_4(\xi)\,\theta_2.
+$$
+
+---
+
+### 5. Quick checks
+- At $\xi=0$: $N_1=1$, others zero → $u(0)=q_1$, $u'(0)=\theta_1$.  
+- At $\xi=1$: $N_3=1$, others zero → $u(L)=q_2$, $u'(L)=\theta_2$.  
+- Shape functions ensure $C^1$ continuity across beam elements.
+
+---
+
+### 6. Derivatives (useful for bending curvature)
+$$
+\frac{d}{dx} = \frac{1}{L}\frac{d}{d\xi}
+$$
+
+First derivatives with respect to $\xi$:
+$$
+\frac{dN_1}{d\xi}=-6\xi + 6\xi^2,\qquad
+\frac{dN_2}{d\xi}=L(1 - 4\xi + 3\xi^2),
+$$
+$$
+\frac{dN_3}{d\xi}=6\xi - 6\xi^2,\qquad
+\frac{dN_4}{d\xi}=L(-2\xi + 3\xi^2).
+$$
+
+To get derivatives w.r.t. $x$ divide the above by $L$. For curvature (second derivative),
+$$
+\frac{d^2 u}{dx^2} = \frac{1}{L^2}\sum_{i=1}^4 \frac{d^2 N_i}{d\xi^2}\,d_i,
+$$
+where $d_i$ are the nodal DOFs $(q_1,\theta_1,q_2,\theta_2)$.
+
+---
+
+### 7. Compact matrix form
+Define the vector of nodal DOFs $\mathbf{Q}=[q_1,\theta_1,q_2,\theta_2]^T$ and the shape vector $\mathbf{N}(\xi)=[N_1,N_2,N_3,N_4]$. Then
+$$
+u(x)=\mathbf{N}(\xi)\,\mathbf{Q}.
+$$
+
+---
+
+### 8. Final boxed result
+$$
+\boxed{\begin{aligned}
+N_1(\xi)&=1-3\xi^2+2\xi^3,\\[4pt]
+N_2(\xi)&=L(\xi-2\xi^2+\xi^3),\\[4pt]
+N_3(\xi)&=3\xi^2-2\xi^3,\\[4pt]
+N_4(\xi)&=L(\xi^3-\xi^2),\qquad
+\xi=\dfrac{x}{L}.
+\end{aligned}}
+$$
+
+---
+
+If you'd like, I can:
+- convert these to natural coordinates $\hat\xi\in[-1,1]$, or  
+- derive the element bending stiffness matrix $EI$ using these shape functions.
