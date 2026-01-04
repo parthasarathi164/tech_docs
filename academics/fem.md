@@ -590,6 +590,26 @@ M_2
 \end{bmatrix}
 $$
 
+Equivalent Nodal Force Vector for a Uniformly Varying Load (UDL):
+$$
+\mathbf{f}^e =
+\begin{bmatrix}
+F_1 \\
+M_1 \\
+F_2 \\
+M_2
+\end{bmatrix}
+=
+\begin{bmatrix}
+\dfrac{L_e}{20}\left(7w_1 + 3w_2\right) \\
+\dfrac{L_e^2}{60}\left(3w_1 + 2w_2\right) \\
+\dfrac{L_e}{20}\left(3w_1 + 7w_2\right) \\
+-\dfrac{L_e^2}{60}\left(2w_1 + 3w_2\right)
+\end{bmatrix}
+$$
+
+>NOTE: where $w_1$ and $w_2$ are min and max loads
+
 Neutral Axis:
 The neutral axis is the line in a beam’s cross-section where the material experiences zero longitudinal stress when the beam bends.
 
