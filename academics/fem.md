@@ -1,3 +1,60 @@
+## Table of contents
+
+- [[#some important things|some important things]]
+	- [[#some important things#von misses stress|von misses stress]]
+	- [[#some important things#viva questions|viva questions]]
+	- [[#some important things#what is ansys APDL?|what is ansys APDL?]]
+- [[#1D Bar Element Stiffness Matrix (Natural Coordinates)|1D Bar Element Stiffness Matrix (Natural Coordinates)]]
+	- [[#1D Bar Element Stiffness Matrix (Natural Coordinates)#1. Shape Functions|1. Shape Functions]]
+	- [[#1D Bar Element Stiffness Matrix (Natural Coordinates)#2. Strain-Displacement|2. Strain-Displacement]]
+	- [[#1D Bar Element Stiffness Matrix (Natural Coordinates)#3. Stiffness Matrix|3. Stiffness Matrix]]
+	- [[#1D Bar Element Stiffness Matrix (Natural Coordinates)#4. Final Equation|4. Final Equation]]
+- [[#1D Bar Element Strain Matrix (B-matrix)|1D Bar Element Strain Matrix (B-matrix)]]
+	- [[#1D Bar Element Strain Matrix (B-matrix)#Derivation and Explanation|Derivation and Explanation]]
+- [[#Bar vs Beam Element (DOF)|Bar vs Beam Element (DOF)]]
+- [[#2-Element Cantilever Bar FEM Solution (SI Units)|2-Element Cantilever Bar FEM Solution (SI Units)]]
+	- [[#2-Element Cantilever Bar FEM Solution (SI Units)#1. Stiffness Matrix for Each Element|1. Stiffness Matrix for Each Element]]
+	- [[#2-Element Cantilever Bar FEM Solution (SI Units)#2. Global Stiffness Matrix|2. Global Stiffness Matrix]]
+	- [[#2-Element Cantilever Bar FEM Solution (SI Units)#3. Boundary & Loading Conditions|3. Boundary & Loading Conditions]]
+	- [[#2-Element Cantilever Bar FEM Solution (SI Units)#4. Displacements|4. Displacements]]
+	- [[#2-Element Cantilever Bar FEM Solution (SI Units)#5. Strain in Each Element|5. Strain in Each Element]]
+	- [[#2-Element Cantilever Bar FEM Solution (SI Units)#6. Stress in Each Element|6. Stress in Each Element]]
+	- [[#2-Element Cantilever Bar FEM Solution (SI Units)#Summary Table|Summary Table]]
+- [[#Lab exp (2a)|Lab exp (2a)]]
+	- [[#Lab exp (2a)#1. Given Data|1. Given Data]]
+	- [[#Lab exp (2a)#2. Element Stiffness Matrices|2. Element Stiffness Matrices]]
+	- [[#Lab exp (2a)#3. Global Stiffness Matrix Assembly|3. Global Stiffness Matrix Assembly]]
+	- [[#Lab exp (2a)#4. Reduced System for $u_2$, $u_3$|4. Reduced System for $u_2$, $u_3$]]
+	- [[#Lab exp (2a)#5. Solve Displacements|5. Solve Displacements]]
+	- [[#Lab exp (2a)#6. Strain Calculation in Each Element|6. Strain Calculation in Each Element]]
+		- [[#6. Strain Calculation in Each Element#Element 1 (Nodes 1–2, $L_1 = 100$ mm):|Element 1 (Nodes 1–2, $L_1 = 100$ mm):]]
+		- [[#6. Strain Calculation in Each Element#Element 2 (Nodes 2–3, $L_2 = 200$ mm):|Element 2 (Nodes 2–3, $L_2 = 200$ mm):]]
+	- [[#Lab exp (2a)#7. Stress Calculation in Each Element|7. Stress Calculation in Each Element]]
+		- [[#7. Stress Calculation in Each Element#Element 1:|Element 1:]]
+		- [[#7. Stress Calculation in Each Element#Element 2:|Element 2:]]
+	- [[#Lab exp (2a)#8. Results Table|8. Results Table]]
+	- [[#Lab exp (2a)#for CIE 1|for CIE 1]]
+		- [[#for CIE 1#steps in FEM|steps in FEM]]
+		- [[#for CIE 1#Applications, advantages and limitations of fem|Applications, advantages and limitations of fem]]
+	- [[#Lab exp (2a)#Important Formulae for 3rd, 4th and 5th Experiment|Important Formulae for 3rd, 4th and 5th Experiment]]
+- [[#some important definitions|some important definitions]]
+	- [[#some important definitions#Euler–Bernoulli Beam Theory – Standard Assumptions|Euler–Bernoulli Beam Theory – Standard Assumptions]]
+- [[#important questions for CIE 2|important questions for CIE 2]]
+- [[#Derivation — Shape functions of a 1-D (Euler–Bernoulli) beam element (Hermite cubic)|Derivation — Shape functions of a 1-D (Euler–Bernoulli) beam element (Hermite cubic)]]
+	- [[#Derivation — Shape functions of a 1-D (Euler–Bernoulli) beam element (Hermite cubic)#1. Problem statement|1. Problem statement]]
+	- [[#Derivation — Shape functions of a 1-D (Euler–Bernoulli) beam element (Hermite cubic)#2. Choose approximation and apply nodal boundary conditions|2. Choose approximation and apply nodal boundary conditions]]
+	- [[#Derivation — Shape functions of a 1-D (Euler–Bernoulli) beam element (Hermite cubic)#3. Solve for $a_2$ and $a_3$|3. Solve for $a_2$ and $a_3$]]
+	- [[#Derivation — Shape functions of a 1-D (Euler–Bernoulli) beam element (Hermite cubic)#4. Construct the Hermite shape functions|4. Construct the Hermite shape functions]]
+	- [[#Derivation — Shape functions of a 1-D (Euler–Bernoulli) beam element (Hermite cubic)#5. Quick checks|5. Quick checks]]
+	- [[#Derivation — Shape functions of a 1-D (Euler–Bernoulli) beam element (Hermite cubic)#6. Derivatives (useful for bending curvature)|6. Derivatives (useful for bending curvature)]]
+	- [[#Derivation — Shape functions of a 1-D (Euler–Bernoulli) beam element (Hermite cubic)#7. Compact matrix form|7. Compact matrix form]]
+	- [[#Derivation — Shape functions of a 1-D (Euler–Bernoulli) beam element (Hermite cubic)#8. Final boxed result|8. Final boxed result]]
+- [[#general equation of motion for a structural or mechanical system|general equation of motion for a structural or mechanical system]]
+	- [[#general equation of motion for a structural or mechanical system#1. Single Degree of Freedom (SDOF) Form|1. Single Degree of Freedom (SDOF) Form]]
+	- [[#general equation of motion for a structural or mechanical system#2. Multi-Degree of Freedom (MDOF) Matrix Form|2. Multi-Degree of Freedom (MDOF) Matrix Form]]
+	- [[#general equation of motion for a structural or mechanical system#3. Connection to Your Analysis|3. Connection to Your Analysis]]
+- [[#important terms|important terms]]
+
 ## some important things
 
 ### von misses stress
@@ -488,7 +545,7 @@ Here is a summarized list of key applications of FEM based on the image:
 - Subdividing and preparing data is tedious.
 - Even simple problems may require significant computation and memory for accurate results.
 ---
-### Important Formulae for 3rd, 4th and 5th Experiment
+## Important Formulae for 3rd, 4th and 5th Experiment
 
 Rectangle:
 $I = \frac{b h^3}{12}$
@@ -590,7 +647,7 @@ M_2
 \end{bmatrix}
 $$
 
-Equivalent Nodal Force Vector for a Uniformly Varying Load (UDL):
+Equivalent Nodal Force Vector for a Uniformly Varying Load (UVL):
 $$
 \mathbf{f}^e =
 \begin{bmatrix}
@@ -610,18 +667,49 @@ $$
 
 >NOTE: where $w_1$ and $w_2$ are min and max loads
 
-Neutral Axis:
+## some important definitions (for viva)
+
+- Neutral Axis:
 The neutral axis is the line in a beam’s cross-section where the material experiences zero longitudinal stress when the beam bends.
 
-Elastic Axis:
-The elastic axis is the line along a structure where applied loads cause bending without 
-causing twisting.
+- Elastic Axis:
+The elastic axis is the line along a structure where applied loads cause bending without causing twisting.
 
-Shear Center:
-The shear center is the point on a cross-section where a sideways (shear) force can be 
-applied without making the section twist.
+- Shear Center:
+The shear center is the point on a cross-section where a sideways (shear) force can be applied without making the section twist.
 
-### Euler–Bernoulli Beam Theory – Standard Assumptions
+1. Flutter
+
+A dangerous, self-excited vibration where aerodynamic forces interact with a structure’s elasticity to cause rapidly increasing, unstable oscillations.
+
+2. Damping
+
+The process of energy dissipation in a vibrating system that causes the amplitude of oscillations to decrease over time until the system stops.
+
+3. Natural Frequency
+
+The specific frequency at which a system or object naturally tends to vibrate when it is disturbed and then left to oscillate on its own.
+
+4. MOI (Moment of Inertia)
+
+A measure of an object's resistance to rotational acceleration, determined by its mass and how that mass is distributed relative to the axis of rotation.
+
+5. Parallel and Perpendicular Axis Theorems
+
+- **Parallel Axis Theorem:** Used to find the moment of inertia about any axis parallel to an axis passing through the center of mass ($I = I_{cm} + Md^2$).
+- **Perpendicular Axis Theorem:** States that for a 2D plane (lamina), the moment of inertia about an axis perpendicular to the plane is the sum of the moments of inertia about two mutually perpendicular axes in the plane ($I_z = I_x + I_y$).
+
+5. Resonance
+
+A condition that occurs when the frequency of an external periodic force matches the natural frequency of a system, leading to a massive increase in the amplitude of vibration.
+
+7. Aeroelasticity
+
+The branch of mechanics that studies the interaction between **aerodynamic** forces, **elastic** (structural) forces, and **inertial** (mass) forces.
+
+---
+
+## Euler–Bernoulli Beam Theory – Standard Assumptions
 
 1. **Cross-sections that are plane before deformation remain plane after deformation.**
 2. **Cross-sections remain perpendicular to the neutral axis during bending** (i.e., shear deformation is neglected).
@@ -793,6 +881,43 @@ $$
 
 ---
 
-If you'd like, I can:
-- convert these to natural coordinates $\hat\xi\in[-1,1]$, or  
-- derive the element bending stiffness matrix $EI$ using these shape functions.
+## general equation of motion for a structural or mechanical system
+
+The general equation of motion for a structural or mechanical system (like your flat plate) is a second-order differential equation that describes the balance of forces acting on the system at any given time.
+
+### 1. Single Degree of Freedom (SDOF) Form
+
+For a simple mass-spring-damper system, the equation is:
+
+$$m\ddot{u}(t) + c\dot{u}(t) + ku(t) = F(t)$$
+
+|**Term**|**Physical Name**|**Description**|
+|---|---|---|
+|**$m\ddot{u}(t)$**|**Inertia Force**|Resistance of the mass to acceleration.|
+|**$c\dot{u}(t)$**|**Damping Force**|Resistance proportional to velocity (energy dissipation).|
+|**$ku(t)$**|**Restoring Force**|Elastic resistance of the structure (stiffness).|
+|**$F(t)$**|**External Force**|The time-dependent load applied to the system.|
+
+---
+
+### 2. Multi-Degree of Freedom (MDOF) Matrix Form
+
+Since a flat plate in APDL or Patran consists of thousands of nodes, we use the matrix form to represent the entire system:
+
+$$[M]\{\ddot{u}\} + [C]\{\dot{u}\} + [K]\{u\} = \{F(t)\}$$
+
+- **$[M]$ (Mass Matrix):** Contains the mass and rotational inertia of all elements.
+- **$[C]$ (Damping Matrix):** Represents internal friction or air resistance (often modeled as Rayleigh Damping).
+- **$[K]$ (Stiffness Matrix):** Defines how the plate resists deformation based on its geometry and material properties.
+- **$\{u\}, \{\dot{u}\}, \{\ddot{u}\}$:** Vectors representing the displacement, velocity, and acceleration of every node in the model.
+- **$\{F(t)\}$:** The vector of external loads applied to the nodes.
+
+### 3. Connection to Your Analysis
+
+- **In Static Analysis:** We assume $\ddot{u} = 0$ and $\dot{u} = 0$, so the equation simplifies to $[K]\{u\} = \{F\}$.
+- **In Normal Mode Analysis:** We assume no damping ($[C]=0$) and no external force ($F=0$), leading to the free vibration equation: $[M]\{\ddot{u}\} + [K]\{u\} = 0$.
+
+## important terms
+
+- **Stiffness**: At its simplest, **stiffness** is the resistance of a structural element to deformation. While "strength" tells you when something will break, "stiffness" tells you how much it will bend or stretch before it breaks.
+- 

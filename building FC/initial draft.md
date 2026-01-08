@@ -91,3 +91,18 @@ Since you want to use the **Hardware Debug Pin**:
 - You can see exactly what the Gyroscope told the STM32.
 - You can change the code to say: _"Ignore the gyroscope if the tilt is less than 2 degrees."_
 - You then flash that code, and you have effectively changed the "personality" of the drone's reflexes.
+
+## my questions & answers
+
+**Q:** assume i am uploading my control law code/custom firmware using the default pixhawk bootloader, and this FC attatched drone is flying, how easy is it for the enemy to take control over my drone while it is flying? and how does this process of taking control over my flying drone work, or another case, logging all the drone data into the enemies computer/display, like getting all the data of the drone in the enemy's computer so that they can track our drone's movement?
+
+**Ans:** The Core Problem: MAVLink Lacks Encryption and Authentication
+
+>NOTE: **MAVLink (Micro Air Vehicle Link)** is a **lightweight communication protocol** used in drones to exchange data between the **flight controller**, **ground control station (GCS)**, onboard computers, and other components.
+
+MAVLink, the protocol ArduPilot and PX4 use to communicate between the flight controller and ground station (and to accept commands), is **unencrypted and unauthenticated by default.** This means:[](https://www.mecs-press.org/ijwmt/ijwmt-v15-n6/v15n6-2.html)​
+
+- All telemetry (GPS, altitude, attitude, sensor data) is transmitted in **plaintext**, readable by anyone with a radio receiver in range.[](https://dl.acm.org/doi/10.1145/3634737.3637672)​
+- All commands (arm, disarm, waypoint changes, mode switches, motor outputs) are sent **without cryptographic signing**, so an attacker can inject fake commands pretending to be the legitimate ground station.[](https://ieeexplore.ieee.org/document/10871546/)​
+- No sequence numbering or replay protection, so an old captured packet can be resent to repeat a past command.[](https://arxiv.org/html/2512.01164v1)
+
