@@ -1,4 +1,4 @@
-### Wind Tunnel Experiment (Velocity vs RPM) (lab exp1)
+## Wind Tunnel Experiment (Velocity vs RPM) (lab exp1)
 
 #### General formula for $V_2$
 Start from Bernoulli between points 1 and 2 (same elevation, incompressible, inviscid):
@@ -85,4 +85,61 @@ Applies for **incompressible and inviscid** flow. For compressible or high-Mach 
 5. Repeat for each rpm: 100, 200, 300, 400, 500.
 6. Calculate $V$ for each rpm using the above formula.
 7. Plot $V$ vs rpm and check for linearity.
+---
+
+## for CIE-3
+
+>date: 13-01-2026, Tuesday
+
+![[Pasted image 20260113150844.png]]
+
+**Induced and parasitic drag difference**
+
+- Induced drag is a byproduct of lift (strongest at low speeds/high AoA, decreases with speed), while parasite drag is air resistance from the aircraft's shape/friction (increases with speed).
+---
+
+![[Pasted image 20260113151654.png]]
+
+>detailed video on induced drag: https://youtu.be/MnB6Lqr91yC
+
+### 1. The Formation of Wingtip Vortices
+
+Because a wing generates lift, there is **high pressure** on the bottom surface and **low pressure** on the top surface. At the wingtips, the air is not "contained" by the wing structure, so the high-pressure air underneath tries to curl around the tip to reach the low-pressure zone on top.
+
+- This creates two counter-rotating spirals of air trailing behind the aircraft.
+- From the **rear view** (as shown in your image):
+    - The **left** vortex rotates **clockwise**.
+    - The **right** vortex rotates **counter-clockwise**.
+
+### 2. The Downwash Effect (The Middle Section)
+
+In the region between the two wingtips (where the actual wing is located), the combined action of both vortices pushes the air **downward**.
+
+- **Definition:** This downward component of velocity is called **Downwash** ($w$).
+- **Consequence:** Downwash tilts the local relative wind downward. This means the wing "sees" the air coming from a slightly shallower angle than the actual flight path.
+- **Induced Drag:** Because the lift vector is perpendicular to the _local_ relative wind, it gets tilted backward. This backward component of lift is what we call **Induced Drag**—the "price" paid for generating lift with a finite wing.
+
+### 3. The Upwash Effect (The Outer Sections)
+
+Outside the span of the wing, the circular motion of the vortices continues. After the air is pushed down in the center, it must move outward and then **upward** to complete the cycle.
+
+- **"Not experienced by the wing":** Your note correctly identifies that this upwash occurs outside the physical structure of the wing. Therefore, it does not contribute to the lift or drag of the aircraft generating it.
+- **Formation Flight:** This is the principle birds (and military pilots) use when flying in a "V" formation. A trailing bird will position its wing in the **upwash** of the bird in front, gaining "free" lift and reducing the effort needed to fly.
+
+### 4. The Velocity Distribution Curve
+
+The "W" shaped curve at the bottom of your sketch represents the **magnitude and direction of the induced vertical velocity** across a horizontal line passing through the vortices.
+
+- **Near the tips:** The velocity is highest because you are closest to the vortex core. Mathematically, according to the **Biot-Savart Law**, the induced velocity is inversely proportional to the distance from the vortex center.
+- **At the center (Fuselage):** The downwash is usually slightly lower at the centerline than it is closer to the tips (depending on the lift distribution of the wing).
+- **The Spikes:** The points where the curve crosses the horizontal axis are the locations of the vortex cores (the wingtips).
+---
+### Summary Table
+
+| **Feature**  | **Direction** | **Impact**                                                                    |
+| ------------ | ------------- | ----------------------------------------------------------------------------- |
+| **Downwash** | Downward      | Reduces effective angle of attack; creates Induced Drag.                      |
+| **Upwash**   | Upward        | Occurs outside the wingspan; can be used by trailing aircraft for efficiency. |
+| **Vortices** | Circular      | Caused by pressure equalization at the wingtips.                              |
+
 ---
