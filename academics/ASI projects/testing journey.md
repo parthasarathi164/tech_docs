@@ -110,7 +110,7 @@ If it feels too smooth and laggy, open index.html and change const smoothingFact
 If it's still too jittery, change it to a smaller number, like 0.05.
 
 ---
-#### why turn coordinator is not possible using a 6 axis sensor.
+#### why turn coordinator is not possible using a 6 axis sensor?
 
 To get a true, stable compass heading, you need a 3rd sensor: a **Magnetometer** (which would make it a 9-axis sensor).
 

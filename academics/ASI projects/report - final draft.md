@@ -39,7 +39,7 @@ this is the link to my final gui file --> ![[final_ai.htm]]
 ---
 ## testing phase
 
-![[testing phase]]
+![[testing journey]]
 
 ---
 ## Step-by-Step Implementation
@@ -216,8 +216,6 @@ void calculate_orientation() {
 3. ~~Initialize display with correct I2C address (typically 0x3C or 0x78)~~
 4. ~~Clear display buffer~~
 5. ~~Set text size and cursor position~~
-
-![[content about code - for report]]
 
 ### **Step 10: Calibration and Testing**
 

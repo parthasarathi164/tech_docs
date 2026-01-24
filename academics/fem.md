@@ -863,4 +863,6 @@ $$[M]\{\ddot{u}\} + [C]\{\dot{u}\} + [K]\{u\} = \{F(t)\}$$
 ## important terms
 
 - **Stiffness**: At its simplest, **stiffness** is the resistance of a structural element to deformation. While "strength" tells you when something will break, "stiffness" tells you how much it will bend or stretch before it breaks.
-- 
+
+## youtube video for aeroelasticity of a wing - https://youtu.be/O8ZGbmLKv8I
+
