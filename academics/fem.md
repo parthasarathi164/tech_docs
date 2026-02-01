@@ -834,12 +834,12 @@ For a simple mass-spring-damper system, the equation is:
 
 $$m\ddot{u}(t) + c\dot{u}(t) + ku(t) = F(t)$$
 
-|**Term**|**Physical Name**|**Description**|
-|---|---|---|
-|**$m\ddot{u}(t)$**|**Inertia Force**|Resistance of the mass to acceleration.|
-|**$c\dot{u}(t)$**|**Damping Force**|Resistance proportional to velocity (energy dissipation).|
-|**$ku(t)$**|**Restoring Force**|Elastic resistance of the structure (stiffness).|
-|**$F(t)$**|**External Force**|The time-dependent load applied to the system.|
+| **Term**           | **Physical Name**   | **Description**                                           |
+| ------------------ | ------------------- | --------------------------------------------------------- |
+| **$m\ddot{u}(t)$** | **Inertia Force**   | Resistance of the mass to acceleration.                   |
+| **$c\dot{u}(t)$**  | **Damping Force**   | Resistance proportional to velocity (energy dissipation). |
+| **$ku(t)$**        | **Restoring Force** | Elastic resistance of the structure (stiffness).          |
+| **$F(t)$**         | **External Force**  | The time-dependent load applied to the system.            |
 
 ---
 
