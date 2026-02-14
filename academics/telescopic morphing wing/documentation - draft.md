@@ -87,3 +87,87 @@ Since you are dealing with a **modal frequency analysis (SOL 103)** that is cras
 
 - **NASTRAN Programmers Manual.pdf:** This is the most important file for you. It explains how the code is structured, how to add new elements, and how the memory (GINO - General Input/Output) is managed.
 - **NASTRAN Users Manual.pdf:** Essential for understanding the syntax of the input cards you are using in your BDF files.
+
+---
+
+## what is FORTRAN? it's Perks
+
+**Fortran** (which stands for **For**mula **Tran**slation) is the world's first high-level programming language. Created by IBM in the 1950s, it was designed specifically for scientists and engineers to perform complex mathematical calculations without having to write in tedious machine code.
+
+Even though it’s over 70 years old, it remains the "gold standard" for high-performance computing (HPC) and heavy-duty engineering simulations like the Nastran solver you're looking into.
+
+---
+
+### 1. Why is it still used?
+
+You might wonder why engineers haven't just switched to Python or C++. There are three main reasons:
+
+- **Raw Speed:** When it comes to "crunching" massive matrices (like a wing's structural mesh), Fortran is often faster than almost any other language. It is designed to talk to the computer's processor in a way that prioritizes math execution.
+- **Legacy (The "If it ain't broke" rule):** Huge libraries of verified, "battle-tested" engineering code (like Nastran or weather prediction models) were written in Fortran. Re-writing them would be incredibly expensive and risky.
+- **Array Handling:** Fortran treats matrices and arrays as "first-class citizens." In many languages, you have to do extra work to handle math on a grid of numbers; in Fortran, it’s built into the syntax.
+
+---
+
+### 2. How it looks and feels
+
+If you look at the NASTRAN-95 source code, you’ll notice a few distinct characteristics:
+
+- **Case Insensitivity:** Modern Fortran doesn't care if you write `PRINT` or `print`.
+- **Column-Based (Older Versions):** Early Fortran (like Fortran 77) was designed for punch cards. You had to start your code in specific columns (e.g., column 7 for the actual instruction).
+- **Math-Heavy Syntax:** It looks very similar to how you would write an equation on a chalkboard.
+
+---
+
+### 3. Key Differences from Modern Languages
+
+Compared to a language like Python, Fortran is **Compiled**, not **Interpreted**.
+
+|**Feature**|**Fortran**|**Python**|
+|---|---|---|
+|**Execution**|Needs a compiler (turns code into an .exe).|Runs line-by-line via an interpreter.|
+|**Data Types**|You must strictly declare if a number is an Integer or Real.|Very flexible; handles types for you.|
+|**Purpose**|Heavy math, fluid dynamics, structural analysis.|Web apps, AI, automation, general use.|
+|**Speed**|Extremely fast for math operations.|Slower (often uses Fortran libraries in the background!).|
+
+---
+
+## about MATLAB & it's source
+
+MATLAB has a fascinating "origin story" that connects directly to the Fortran world you've been exploring. It wasn't originally intended to be a commercial product; it was created as a teaching tool to make engineering math easier.
+
+### 1. The Origin: A "Wrapper" for Fortran
+
+In the late 1970s, **Cleve Moler**, a professor at the University of New Mexico, wanted his students to use powerful linear algebra libraries (called **LINPACK** and **EISPACK**) without having to learn Fortran.
+
+At the time, using those libraries required writing a full Fortran program, compiling it, and linking it—a tedious process for students who just wanted to solve a matrix equation. Moler wrote **MATLAB** (short for **MAT**rix **LAB**oratory) as an interactive "command-line" interface that would call those Fortran subroutines in the background.
+
+### 2. What is the source code made of?
+
+While the original 1970s version was almost entirely Fortran, modern MATLAB is a sophisticated multi-language machine.
+
+The source code is primarily composed of three layers:
+
+- **C and C++ (The Engine):** Most of the modern MATLAB engine, including the desktop interface, the graphics system (handle graphics), and the "Just-In-Time" (JIT) compiler, is written in C++. This provides the speed and memory management needed for professional software.
+- **Fortran (The Math Backbone):** To this day, the heaviest mathematical lifting (like solving huge systems of linear equations) is still done by highly optimized Fortran libraries like **LAPACK** and **BLAS**. When you type `A \ b` in MATLAB, you are likely triggering a Fortran routine under the hood.
+- **MATLAB itself (The Toolboxes):** A huge portion of MATLAB is actually written in `.m` files (MATLAB's own language). Most of the "Toolboxes" (Signal Processing, Optimization, etc.) are built using MATLAB code that runs on top of the C++/Fortran engine.
+- **Java:** The Graphical User Interface (GUI) and the desktop environment traditionally used Java for cross-platform compatibility.
+
+### 3. Comparing the "DNA" of Solvers
+
+Since you are looking at both **Nastran** and **MATLAB**, it's helpful to see how their "source code" philosophies differ:
+
+|**Feature**|**Nastran (Historical)**|**MATLAB (Modern)**|
+|---|---|---|
+|**Primary Language**|Fortran|C++|
+|**Philosophy**|A single-purpose "Black Box" solver.|A general-purpose "Sandbox" for math.|
+|**Extension**|Write a Fortran Subroutine or DMAP.|Write a `.m` script or C++ "MEX" file.|
+|**User Interface**|Text-based (Input Deck).|Visual/Interactive (Command Window).|
+
+---
+
+### Why this matters for your Wing Analysis
+
+When you use a tool like **HyperMesh**, it acts as a bridge. HyperMesh creates the BDF file (the "text" input) that the **Fortran-based Nastran** understands. If you were to take the results from Nastran and plot them or perform further data analysis, you would likely use **MATLAB** to "crunch" those numbers.
+
+---
+
