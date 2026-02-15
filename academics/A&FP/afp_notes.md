@@ -864,3 +864,545 @@ Total drag reaches its minimum value at the speed where **Parasite Drag is equal
 
 ---
 
+### Problem 4: Aircraft Ceilings
+
+#### (a) Absolute Ceiling
+
+The absolute ceiling is the theoretical maximum altitude at which an aircraft can maintain steady level flight. At this altitude, the maximum power available from the engines exactly matches the minimum power required to stay airborne.
+
+- **Reason:** As altitude increases, air density decreases, which reduces engine thrust/power. Eventually, the excess power drops to zero, meaning the maximum Rate of Climb ($R/C$) is **$0 \text{ m/s}$ or $0 \text{ fpm}$**.
+    
+
+#### (b) Service Ceiling
+
+The service ceiling is the practical maximum altitude where the aircraft can still maintain a small, steady rate of climb.
+
+- **Typical Value:** For propeller-driven aircraft, it is the altitude where the max $R/C$ drops to **$100 \text{ fpm}$ ($0.5 \text{ m/s}$)**. For jet aircraft, a value of **$500 \text{ fpm}$** is often used.
+    
+- **Reason:** Reaching the absolute ceiling takes an infinite amount of time as the climb rate approaches zero; the service ceiling provides a measurable limit for safe operation.
+    
+
+#### (c) Operational Relevance
+
+The service ceiling is more relevant for planning because it ensures the pilot has a "safety margin" of excess power.
+
+- **Reason:** Flying at the absolute ceiling leaves no room for maneuvers or atmospheric changes (like turbulence or downdrafts). The service ceiling ensures the aircraft can still climb effectively if needed for safety or traffic ATC requirements.
+    
+
+---
+
+### Problem 5: Power Required ($P_R$)
+
+#### (a) Physical Meaning of Terms
+
+The equation $P_R = \frac{1}{2}\rho V^3 S C_{D,0} + \frac{2W^2}{\rho V S \pi e AR}$ consists of two distinct power components:
+
+1. **Parasite Power ($\frac{1}{2}\rho V^3 S C_{D,0}$):** This is the power needed to overcome parasite drag (skin friction and shape). It increases with the **cube of velocity ($V^3$)**.
+    
+2. **Induced Power ($\frac{2W^2}{\rho V S \pi e AR}$):** This is the power needed to overcome induced drag (drag due to lift). It is **inversely proportional to velocity ($1/V$)**.
+    
+
+#### (b) Power Required Curve Features
+
+The sketch of the $P_R$ curve is typically **U-shaped** (or "J-shaped").
+
+- **Minimum Point ($P_{R,min}$):** The lowest point of the curve indicates the speed for maximum endurance (staying in the air the longest).
+    
+- **Shape:** At low speeds, the curve is high due to high induced power. At high speeds, the curve rises steeply due to parasite power.
+    
+- **Reason:** The total power is the sum of a term that increases with speed and a term that decreases with speed, creating a unique minimum point.
+    
+
+#### (c) Increase at Low and High Speeds
+
+- **At High Speeds:** Power required increases because parasite drag grows with the square of speed, and since $Power = Force \times Velocity$, the power required scales with **$V^3$**. The engines must work exponentially harder to "push" through the air.
+    
+- **At Low Speeds:** To fly slowly in level flight, the aircraft must fly at a very high Angle of Attack ($AoA$). This creates massive wingtip vortices (induced drag). Because speed is low, the aircraft is less efficient at generating lift, requiring more power to overcome this **induced drag**.
+
+---
+
+### Problem 6
+
+#### (a) Calculate the Specific Excess Power ($P_s$)
+
+Specific excess power is defined as the excess power per unit weight of the aircraft. It represents the energy rate available for climbing or accelerating.
+
+- **Formula:** $P_s = \frac{P_A - P_R}{W}$
+    
+- **Calculation:** $P_s = \frac{950,000\text{ W} - 650,000\text{ W}}{55,000\text{ N}} = \frac{300,000}{55,000} \approx \mathbf{5.45\text{ m/s}}$
+    
+- **Reason:** By subtracting the power required for level flight ($P_R$) from the total power available ($P_A$), we find the surplus power. Dividing by weight translates this surplus into a performance metric independent of aircraft size.
+    
+
+#### (b) Determine the Rate of Climb ($R/C$)
+
+For an aircraft in a steady, non-accelerated climb, the specific excess power is numerically equal to the vertical rate of climb.
+
+- **In m/s:** $R/C = P_s \approx \mathbf{5.45\text{ m/s}}$
+    
+- **In m/min:** $5.45\text{ m/s} \times 60 \approx \mathbf{327\text{ m/min}}$
+    
+- **Reason:** Power is the rate of doing work. In a climb, the excess power is used to do work against gravity by increasing the aircraft's potential energy (altitude).
+    
+
+#### (c) Variation with Altitude and Operational Significance
+
+- **Variation:** $P_s$ typically **decreases as altitude increases**. This is because air density drops, which reduces the maximum power available ($P_A$) from the engines more rapidly than it reduces the power required ($P_R$).
+    
+- **Operational Significance:** It defines the aircraft's **maneuverability and climb limits**. When $P_s = 0$, the aircraft has reached its absolute ceiling and can no longer climb or accelerate in level flight.
+    
+
+---
+
+### Problem 7
+
+#### (a) Better Range at Higher Cruise Altitudes
+
+For a propeller-driven aircraft, the Breguet range formula shows that range ($R$) depends on aerodynamic efficiency ($C_L/C_D$), propeller efficiency ($\eta$), and specific fuel consumption ($c$).
+
+- **Reason:** At higher altitudes, the air is less dense. To maintain the same lift at the most efficient $C_L/C_D$, the aircraft must fly at a **higher True Airspeed (TAS)**. Since range is effectively "speed $\times$ time in the air," flying faster for the same power setting allows the aircraft to cover more ground before the fuel is exhausted.
+    
+
+#### (b) Limiting Factors for High-Altitude Flight
+
+While higher is generally better for range, two primary factors prevent flying at extremely high altitudes:
+
+1. **Engine Power Lapse:** As air density becomes very low, naturally aspirated or even turbocharged engines eventually cannot intake enough oxygen to maintain the power required ($P_R$) for level flight.
+    
+2. **Stall Speed ($V_{stall}$):** Because $V_{stall}$ increases as air density decreases, eventually the minimum speed to stay airborne (stall speed) meets the maximum speed the engine can provide (power limit). This is colloquially known as the **"Coffin Corner."**
+
+---
+
+### Problem 8
+
+#### (a) Velocity at which total drag is minimum ($V_{md}$)
+
+To find the minimum drag velocity, we first determine the lift coefficient for minimum drag ($C_{L,md}$) and then solve for the corresponding speed.
+
+1. **Calculate the induced drag constant ($K$):**
+    
+    $$K = \frac{1}{\pi \cdot AR \cdot e} = \frac{1}{\pi \cdot 7.2 \cdot 0.91} \approx \mathbf{0.0486}$$
+    
+2. **Calculate $C_{L,md}$:**
+    
+    Minimum drag occurs when zero-lift drag equals induced drag ($C_{D,0} = K C_L^2$).
+    
+    $$C_{L,md} = \sqrt{\frac{C_{D,0}}{K}} = \sqrt{\frac{0.022}{0.0486}} \approx \mathbf{0.6728}$$
+    
+3. **Calculate velocity ($V_{md}$):**
+    
+    Using the lift equation for steady level flight ($W = L = \frac{1}{2} \rho V^2 S C_L$):
+    
+    $$V_{md} = \sqrt{\frac{2W}{\rho S C_{L,md}}} = \sqrt{\frac{2 \cdot 65,000}{0.590 \cdot 32 \cdot 0.6728}} = \sqrt{\frac{130,000}{12.703}} \approx \mathbf{101.16 \text{ m/s}}$$
+    
+
+- **Reason:** The aircraft must fly at this specific speed to maintain the angle of attack that produces the $C_L$ required for maximum aerodynamic efficiency. At higher speeds, parasite drag dominates; at lower speeds, induced drag dominates.
+    
+
+---
+
+#### (b) Minimum drag value and its components
+
+1. **Calculate minimum drag coefficient ($C_{D,min}$):**
+    
+    Since parasite and induced drag are equal at this point:
+    
+    $$C_{D,min} = 2 \cdot C_{D,0} = 2 \cdot 0.022 = \mathbf{0.044}$$
+    
+2. **Calculate maximum lift-to-drag ratio ($(L/D)_{max}$):**
+    
+    $$(L/D)_{max} = \frac{C_{L,md}}{C_{D,min}} = \frac{0.6728}{0.044} \approx \mathbf{15.29}$$
+    
+3. **Calculate minimum drag force ($D_{min}$):**
+    
+    $$D_{min} = \frac{W}{(L/D)_{max}} = \frac{65,000}{15.29} \approx \mathbf{4,251 \text{ N}}$$
+    
+4. **Drag Components:**
+    
+    - **Parasite Drag:** $0.5 \cdot D_{min} \approx \mathbf{2,125.5 \text{ N}}$
+        
+    - **Induced Drag:** $0.5 \cdot D_{min} \approx \mathbf{2,125.5 \text{ N}}$
+        
+
+- **Reason:** By definition, the minimum drag point is the "equilibrium" between the drag caused by the aircraft's shape (parasite) and the drag caused by generating lift (induced).
+    
+
+---
+
+#### (c) Significance of minimum drag speed for design and operations
+
+- **Maximum Endurance:** Flying at $V_{md}$ allows a jet aircraft to stay in the air for the maximum amount of time per unit of fuel, which is critical for loitering or holding patterns.
+    
+- **Optimum Glide:** If an engine fails, flying at $V_{md}$ provides the shallowest glide angle, allowing the pilot to cover the maximum horizontal distance over the ground.
+    
+- **Climb Performance:** For jet aircraft, the maximum angle of climb occurs at $V_{md}$, as this is the point where the greatest amount of excess thrust is typically available.
+    
+- **Design Benchmark:** Engineers use this speed as a baseline to optimize the wing's aspect ratio and airfoil selection to ensure the aircraft cruises as close to its most efficient point as possible.
+
+---
+
+## Aircraft Vertical Performance and Energy Management
+
+This section details the fundamental parameters governing how an aircraft climbs and manages its energy state, primarily focusing on the vertical flight envelope.
+
+---
+
+### i) Time to Climb
+
+The **Time to Climb** is the total duration required for an aircraft to transition from an initial altitude ($h_1$) to a higher target altitude ($h_2$). This value is rarely calculated as a simple linear rate because engine performance and aerodynamic efficiency degrade as air density decreases with altitude.
+
+**Mathematical Expression:**
+
+Since the Rate of Climb ($RC$) is defined as the change in altitude over time ($\frac{dh}{dt}$), the total time is determined by integrating the inverse of the rate of climb across the altitude change:
+
+$$t = \int_{h_1}^{h_2} \frac{1}{RC} dh$$
+
+---
+
+### ii) Maximum Climb Angle ($\theta_{max}$)
+
+The **Climb Angle ($\theta$)** represents the steepness of the flight path relative to the horizontal plane. The **Maximum Climb Angle ($\theta_{max}$)** is the steepest possible ascent an aircraft can maintain, which is a critical metric for clearing obstacles (like mountains or buildings) immediately after takeoff.
+
+**Mathematical Expression:**
+
+In a steady climb, this angle is a function of the **excess thrust** ($T - D$) relative to the aircraft's weight ($W$):
+
+$$\sin \theta = \frac{T - D}{W}$$
+
+---
+
+### iii) Rate of Climb ($RC$)
+
+The **Rate of Climb** is the vertical velocity of the aircraft, typically expressed in meters per second (m/s) or feet per minute (fpm). While climb angle measures "steepness," the rate of climb measures the "speed" of altitude gain.
+
+**Mathematical Expression:**
+
+The rate of climb is directly proportional to the **Specific Excess Power ($P_s$)**, which is the surplus power available after overcoming level-flight drag:
+
+$$RC = V \sin \theta = \frac{P_A - P_R}{W}$$
+
+---
+
+### iv) Power Required ($P_R$) and Power Available ($P_A$)
+
+These two terms define the boundaries of the aircraft's performance envelope.
+
+- **Power Required ($P_R$):** The power needed to overcome total drag (parasite and induced) to maintain steady level flight at a specific speed. Mathematically, $P_R = D \times V$.
+    
+- **Power Available ($P_A$):** The actual power provided by the propulsion system (engine and propeller/fan) at a given altitude and throttle setting.
+    
+
+**Operational Insight:**
+
+The difference between these two values ($P_A - P_R$) is the excess power used for maneuvers and climbing. When the Power Available curve intersects the Power Required curve, the excess power becomes zero, marking the aircraft's **Absolute Ceiling**.
+
+---
+
+## Load Factor and Bank Angle in Level Coordinated Turns
+
+In a level coordinated turn, the aircraft must maintain a constant altitude while turning. This requires the lift vector to be tilted to provide the necessary centripetal force while still supporting the aircraft's weight.
+
+---
+
+#### 1. Force Balance and Equilibrium
+
+Consider an aircraft of weight $W$ in a steady, level coordinated turn at a bank angle $\phi$.
+
+- **Vertical Equilibrium:** The vertical component of lift ($L \cos \phi$) must exactly balance the weight ($W$) to maintain altitude.
+    
+    $$L \cos \phi = W \tag{1}$$
+    
+- **Horizontal (Centripetal) Balance:** The horizontal component of lift ($L \sin \phi$) provides the centripetal force required to change the aircraft's direction.
+    
+    $$L \sin \phi = \frac{W V^2}{g R} \tag{2}$$
+    
+    _(where $V$ is velocity, $g$ is gravitational acceleration, and $R$ is the turn radius)_
+    
+
+---
+
+#### 2. Derivation of Load Factor ($n$)
+
+The load factor, often called "G-load," is defined as the ratio of the lift generated to the weight of the aircraft.
+
+Using equation (1):
+
+$$n = \frac{L}{W} = \frac{1}{\cos \phi}$$
+
+**Key Insight:** As the bank angle increases, the load factor increases exponentially. At a $60^\circ$ bank, the load factor is $2$, meaning the aircraft and pilot experience twice the force of gravity.
+
+---
+
+#### 3. Derivation of Required Bank Angle ($\phi$)
+
+To find the bank angle required for a specific turn radius and speed, we divide equation (2) by equation (1):
+
+$$\frac{L \sin \phi}{L \cos \phi} = \frac{W V^2 / g R}{W}$$
+
+$$\tan \phi = \frac{V^2}{g R}$$
+
+**Solving for $\phi$:**
+
+$$\phi = \tan^{-1} \left( \frac{V^2}{g R} \right)$$
+
+---
+
+#### 4. Summary of Operational Implications
+
+- **Structural Limits:** Because the load factor $n$ increases with bank angle, pilots must ensure they do not exceed the aircraft's "limit load factor" during steep turns to avoid structural damage.
+    
+- **Stall Speed Increase:** Since the wing must produce more lift ($L = nW$) in a turn, the stall speed increases by a factor of $\sqrt{n}$.
+    
+- **Radius vs. Speed:** For a constant bank angle, a higher airspeed results in a much larger turn radius ($R \propto V^2$).
+    
+
+---
+
+## The Sequence of Events During Takeoff
+
+The takeoff phase is a critical transition where an aircraft accelerates from a standstill to a speed where the wings can generate enough lift to support the aircraft's weight. This sequence is typically divided into three distinct segments: the ground roll, the transition (rotation), and the initial climb.
+
+---
+
+### 1. The Ground Roll (Acceleration Phase)
+
+This phase begins when the pilot releases the brakes and applies maximum takeoff power.
+
+- **Force Balance:** The aircraft must overcome static friction and aerodynamic drag ($D$). The net force causing acceleration is $F = T - D - f_r$, where $T$ is thrust and $f_r$ is rolling friction.
+    
+- **Speed Accumulation:** As the velocity ($V$) increases, the parasite drag increases with $V^2$, while the rolling friction decreases slightly as the wings begin to generate "incidental" lift, lightening the load on the tires.
+    
+- **Directional Control:** Initially, the pilot uses the nose-wheel steering; as speed increases, the rudder becomes aerodynamically effective enough to maintain the centerline.
+    
+
+---
+
+### 2. Transition and Rotation ($V_r$)
+
+Once the aircraft reaches a pre-calculated speed known as the **Rotation Speed ($V_r$)**, the pilot initiates the transition to flight.
+
+- **The Maneuver:** The pilot pulls back on the control column, deflecting the elevators upward. This creates a downward force on the tail, rotating the aircraft around its center of gravity.
+    
+- **Increase in AoA:** This rotation increases the **Angle of Attack (AoA)** of the main wings.
+    
+- **Lift Generation:** Because $L = \frac{1}{2} \rho V^2 S C_L$, the sudden increase in the lift coefficient ($C_L$) causes the total lift to exceed the aircraft's weight ($W$).
+    
+
+---
+
+### 3. Lift-Off and Initial Climb ($V_{LOF}$)
+
+The moment the wheels leave the runway is defined as **Lift-Off ($V_{LOF}$)**.
+
+- **Clearing the Screen Height:** The takeoff is officially considered complete once the aircraft clears a "screen height" (typically $35 \text{ ft}$ for commercial jets or $50 \text{ ft}$ for small aircraft) at a safe climb speed ($V_2$).
+    
+- **Energy Management:** The excess thrust ($T - D$) is now used to provide a positive **Rate of Climb ($RC$)**.
+    
+- **Clean Configuration:** To reduce drag and improve the climb angle ($\theta$), the pilot retracts the landing gear and, eventually, the flaps/slats once a safe altitude and speed are achieved.
+    
+
+---
+
+### Summary Table: Critical Takeoff Speeds
+
+|**Speed Term**|**Definition**|**Operational Significance**|
+|---|---|---|
+|**$V_1$**|Decision Speed|Beyond this speed, the takeoff must continue even if an engine fails.|
+|**$V_r$**|Rotation Speed|The speed at which the pilot raises the nose gear.|
+|**$V_{LOF}$**|Lift-off Speed|The speed at which the aircraft becomes airborne.|
+|**$V_2$**|Takeoff Safety Speed|The minimum speed to be maintained up to the screen height.|
+
+---
+
+## Aircraft Performance Derivations
+
+This section covers the derivation of the accelerated rate of climb and the approach distance during landing, both fundamental to aircraft flight mechanics.
+
+---
+
+### 10 (a) Derivation of Accelerated Rate of Climb
+
+When an aircraft is in an accelerated climb, the excess power is used for two purposes: increasing altitude (potential energy) and increasing velocity (kinetic energy).
+
+#### 1. Energy Rate Equation
+
+The total energy of the aircraft ($E$) is the sum of its potential and kinetic energy:
+
+$$E = Wh + \frac{1}{2}\frac{W}{g}V^2$$
+
+The rate of change of energy with respect to time (Specific Excess Power, $P_s$) is:
+
+$$P_s = \frac{dE/dt}{W} = \frac{dh}{dt} + \frac{V}{g}\frac{dV}{dt}$$
+
+#### 2. Power Balance
+
+From the power available ($P_A$) and power required ($P_R$) relationship:
+
+$$P_s = \frac{P_A - P_R}{W} = V\left(\frac{T-D}{W}\right)$$
+
+#### 3. Solving for Accelerated Rate of Climb ($RC_{accel}$)
+
+The actual vertical rate of gain in altitude is $\frac{dh}{dt}$. Rearranging the energy rate equation:
+
+$$RC_{accel} = \frac{dh}{dt} = P_s - \frac{V}{g}\frac{dV}{dt}$$
+
+$$RC_{accel} = V\left(\frac{T-D}{W}\right) \left[ \frac{1}{1 + \frac{V}{g}\frac{dV}{dh}} \right]$$
+
+---
+
+### 10 (b) Expression for Approach Distance During Landing
+
+The landing approach distance is the horizontal distance covered while the aircraft descends from a specific "screen height" (usually $50 \text{ ft}$ or $15 \text{ m}$) to the point of touchdown.
+
+#### 1. Approach Geometry
+
+The aircraft follows a glide path at a constant approach angle ($\gamma_a$). Assuming a steady descent where thrust is minimal or at idle:
+
+$$\tan \gamma_a = \frac{h_a}{S_a} \approx \sin \gamma_a \text{ (for small angles)}$$
+
+_(where $h_a$ is screen height and $S_a$ is approach distance)_
+
+#### 2. Force Balance in Glide
+
+In a steady descent, the component of weight along the flight path balances the drag:
+
+$$W \sin \gamma_a = D \implies \sin \gamma_a = \frac{D}{W} = \frac{1}{L/D}$$
+
+#### 3. Final Expression for Approach Distance ($S_a$)
+
+Substituting the glide relationship into the geometric equation:
+
+$$S_a = \frac{h_a}{\tan \gamma_a} = h_a \left( \frac{L}{D} \right)_{approach}$$
+
+**Key Factors Affecting $S_a$:**
+
+- **Screen Height ($h_a$):** Direct linear relationship; higher clearance requires longer distance.
+    
+- **Aerodynamic Efficiency ($L/D$):** A "cleaner" aircraft with higher $L/D$ will have a shallower glide and require a much longer approach distance unless spoilers or airbrakes are used.
+
+---
+
+## Aircraft Performance and Flight Mechanics Notes
+
+This comprehensive set of notes covers the fundamental derivations and concepts for aircraft performance, ranging from cruise efficiency to takeoff and landing maneuvers.
+
+---
+
+### 1. Jet Aircraft: Range and Altitude Limits
+
+#### (a) Breguet Range Equation for Jet Propelled Airplanes
+
+The range ($R$) of a jet aircraft depends on the fuel consumed relative to the thrust produced over time.
+
+- **Fuel Flow Rate:** The rate of weight change is $\frac{dW}{dt} = -c_t \cdot T$, where $c_t$ is thrust-specific fuel consumption (TSFC).
+    
+- **Distance Integration:** Range is the integral of velocity over time: $R = \int V dt = \int \frac{V}{-c_t T} dW$.
+    
+- **Steady Level Flight:** Substituting $T = D$ and $L = W$, the equation becomes $R = \int \frac{V}{c_t} \frac{L}{D} \frac{dW}{W}$.
+    
+- **Final Formula:** Assuming constant speed and efficiency, the range is:
+    
+    $$R = \frac{V}{c_t} \left( \frac{L}{D} \right) \ln\left( \frac{W_0}{W_e} \right)$$
+    
+
+#### (b) Service and Absolute Ceilings
+
+Ceilings define the vertical boundaries of the flight envelope based on engine power.
+
+- **Absolute Ceiling:** The maximum theoretical altitude where the Rate of Climb ($RC$) is exactly zero. At this point, Power Available ($P_A$) equals Power Required ($P_R$).
+    
+- **Service Ceiling:** The practical altitude limit where $RC$ drops to $100 \text{ fpm}$ ($0.5 \text{ m/s}$) for propeller aircraft or $500 \text{ fpm}$ for jets.
+    
+- **Operational Relevance:** The service ceiling is preferred for planning as it provides a safety margin of excess power for maneuvering or countering turbulence.
+    
+
+---
+
+### 2. Propeller Aircraft: Endurance and Vertical Performance
+
+#### (a) Endurance ($E$) for Propeller-Driven Airplanes
+
+Endurance is the maximum time an aircraft can stay airborne.
+
+- **Fuel Flow:** For propellers, fuel flow depends on Power Required ($P_R$) and specific fuel consumption ($c$): $\frac{dW}{dt} = -c \cdot P_R$.
+    
+- **Integration:** $E = \int \frac{1}{-c P_R} dW$. Substituting $P_R = \frac{DV}{\eta}$.
+    
+- **Final Formula:**
+    
+    $$E = \frac{\eta}{c} \frac{C_L^{3/2}}{C_D} \sqrt{2 \rho S} \left( \frac{1}{\sqrt{W_e}} - \frac{1}{\sqrt{W_0}} \right)$$
+    
+- **Key Insight:** Maximum endurance occurs when flying at the speed for minimum power required.
+    
+
+#### (b) Performance Terminology
+
+- **Time to Climb:** The total time to ascend, found by integrating the inverse of the rate of climb: $t = \int \frac{1}{RC} dh$.
+    
+- **Maximum Climb Angle ($\theta_{max}$):** The steepest ascent path, achieved when excess thrust ($T-D$) is maximized. $\sin \theta = \frac{T-D}{W}$.
+    
+- **Rate of Climb ($RC$):** The vertical speed of altitude gain: $RC = \frac{P_A - P_R}{W}$.
+    
+- **Power Required vs. Available:** $P_R$ is the power needed to overcome drag; $P_A$ is the actual power produced by the engine/propeller.
+    
+
+---
+
+### 3. Takeoff and Maneuvering
+
+#### (a) Takeoff Sequence of Events
+
+Takeoff consists of three phases to transition from ground to safe flight:
+
+1. **Ground Roll:** Acceleration from $V=0$ to $V_r$. Thrust must overcome drag and rolling friction.
+    
+2. **Rotation ($V_r$):** The pilot increases the angle of attack to generate lift.
+    
+3. **Initial Climb:** The aircraft accelerates to $V_2$ and clears the "screen height" (usually $35\text{--}50\text{ ft}$).
+    
+
+#### (b) Load Factor and Bank Angle in Coordinated Turns
+
+In a level turn, lift must support both weight and the centripetal force.
+
+- **Load Factor ($n$):** The ratio of lift to weight: $n = \frac{L}{W} = \frac{1}{\cos \phi}$, where $\phi$ is the bank angle.
+    
+- **Required Bank Angle:** Determined by the speed and radius ($R$) of the turn:
+    
+    $$\tan \phi = \frac{V^2}{gR}$$
+    
+
+---
+
+### 4. Landing and Accelerated Performance
+
+#### (a) Approach Distance ($S_a$) during Landing
+
+The horizontal distance covered from screen height ($h_a$) to touchdown.
+
+- **Glide Balance:** In a steady descent, $\sin \gamma_a = \frac{D}{W} = \frac{1}{L/D}$.
+    
+- **Distance Formula:**
+    
+    $$S_a = \frac{h_a}{\tan \gamma_a} = h_a \left( \frac{L}{D} \right)_{approach}$$
+    
+
+#### (b) Accelerated Rate of Climb
+
+Considering the change in kinetic energy (acceleration) during a climb:
+
+- **Energy Rate:** $P_s = \frac{dh}{dt} + \frac{V}{g}\frac{dV}{dt}$.
+    
+- **Formula:** $RC_{accel} = RC_{steady} \times \left[ \frac{1}{1 + \frac{V}{g}\frac{dV}{dh}} \right]$.
+    
+
+#### (c) The $V-n$ Diagram
+
+A graphical representation of the aircraft's structural and aerodynamic limits.
+
+- **X-axis:** Velocity ($V$); **Y-axis:** Load Factor ($n$).
+    
+- **Key Lines:** Stall limit curve, positive/negative limit load factors, and the "Corner Speed" where maximum turn performance is achieved without stalling or structural failure.
+
+---
+
