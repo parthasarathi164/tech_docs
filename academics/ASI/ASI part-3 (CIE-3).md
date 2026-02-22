@@ -1,3 +1,10 @@
+>date updated: 12-01-2026
+>**class 27 to 37**
+
+>**Disclaimer:** This notes covers only the topics I consider most important and does not include all the content from the PPT.
+
+# Aircraft Fuel, Propulsion, Control, and Instrumentation Systems
+
 ## aircraft fuel system
 
 ![[Pasted image 20260111115035.png]]
@@ -372,7 +379,7 @@ This is the "intelligence" of the system, ensuring the engine receives exactly t
 - **HP Filter:** Acts as a final "last-chance" filter to trap any microscopic debris before the fuel enters the sensitive burner nozzles.
 - **Burners:** The final destination where fuel is sprayed into the combustion chamber in a fine mist to be ignited.
 
-### detailed fuel and control system - https://youtu.be/SKiavNTIIsQ
+[detailed fuel and control system youtube video](https://youtu.be/SKiavNTIIsQ)
 
 ---
 ## spray nozzle systems
@@ -725,7 +732,6 @@ fig: resistive type mems pressure sensor
 
 - **Sagnac Effect**: Like the RLG, it measures the time difference between clockwise (CW) and counter-clockwise (CCW) light paths in coils of optical fiber.
 - **Phase Shift**: The rotation induces a phase shift ($\phi_c$) proportional to the number of turns ($N$) and area ($A$): $\phi_c = \frac{8\pi NA\omega}{c\lambda_0}$.
----
 
->**upto class 37 (i guess)**
+---
 

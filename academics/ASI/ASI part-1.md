@@ -1,4 +1,9 @@
->date: 21-02-2026, Saturday
+>date created: 21-02-2026, Saturday
+>**class 1 - 11**
+
+>**Disclaimer:** This notes covers only the topics I consider most important and does not include all the content from the PPT.
+
+# Aircraft Hydraulics and Pneumatics
 
 ## Aircraft Hydraulic System Components
 
@@ -802,5 +807,187 @@ Modern aircraft utilize electronic sensors that have no moving parts, increasing
 
 >date: 22-02-2026, Sunday
 
+## Basic Components of a Pneumatic System
 
-## 
+Pneumatic systems use compressed air to transmit and control energy, consisting of several specialized components to process, store, and utilize that air.
+
+![[Pasted image 20260222101316.png]]
+
+### Core Components
+
+- **Air Filters:** These remove contaminants from the air to protect sensitive downstream components.
+    
+- **Air Compressor:** This is the primary power source, generating compressed air through either diesel or electrical operation.
+    
+- **Air Cooler:** Because air temperature increases during compression, coolers are used to bring the temperature back down to safe operating levels.
+    
+- **Dryer/Separator:** This removes water vapor and moisture from the air to prevent corrosion and system freezing.
+    
+- **Receiver Tank:** This acts as a storage reservoir for the compressed air coming from the compressor, ensuring a steady supply for the system.
+    
+- **Control Valves:** These are used to regulate, monitor, and control the direction of air flow and system pressure.
+    
+- **Air Actuator:** These include air cylinders and motors that translate the compressed air's energy into the physical mechanical movement required by the system.
+
+---
+
+## Pneumatic Air Treatment and Service Units
+
+Atmospheric air contains dust, smoke, and moisture that can cause internal wear and corrosion. To ensure the reliable operation of pneumatic systems, the compressed air must undergo a two-stage treatment process to remove these impurities.
+
+![[Pasted image 20260222102405.png]]
+
+### Primary Air Treatment
+
+This initial stage cleans and prepares the air immediately after it enters the system:
+
+- **Inlet Filtration:** A large-scale intake filter prevents large particles from entering the compressor.
+    
+- **Cooling and Drying:** Compressed air is naturally hot and humid; a cooler lowers the temperature while a dryer removes moisture.
+    
+- **Inline Filtration:** An additional filter removes any remaining fine contaminant particles before the air reaches the storage tank.
+    
+
+---
+
+### Secondary Air Treatment: The Service Unit
+
+After primary treatment, the air passes through a "Service Unit" for final preparation before reaching the actuators. This unit combines three individual functions:
+
+- **Separator/Filter:** Performs a final cleaning of the air.
+    
+- **Pressure Regulator:** Maintains a constant, monitored pressure for the downstream load.
+    
+- **Lubricator:** Adds a fine mist of oil to the air to reduce friction in the moving parts of the pneumatic system.
+
+---
+
+## Aircraft Pneumatic Systems
+
+The pneumatic system utilizes compressed air to transmit power, following a process of generation, treatment, and storage to ensure operational reliability.
+
+### Air Compression
+
+The compressor acts as the heart of the system, converting mechanical energy into potential energy by reducing air volume to increase pressure.
+
+- **Classification:** Compressors are categorized as **Positive Displacement** (such as Piston or Screw types) or **Dynamic Displacement** (like Axial or Centrifugal).
+    
+- **Piston Operation:** Common in aircraft, these range from **Single Acting** (one air pulse per stroke) to **Double Acting** (two pulses per stroke), with the latter reaching pressures above 30 bar and reducing air pulsation.
+
+![[Pasted image 20260222112544.png]]
+    
+- **Selection Factors:** Units are chosen based on their delivery volume and the specific operating pressure required by the aircraft systems.
+    
+
+### Storage and Regulation
+
+Compressed air is housed in an **Air Receiver Tank** to provide a steady, continuous supply.
+
+![[Pasted image 20260222112613.png]]
+
+- **Smoothing Flow:** The tank acts as a buffer to even out pulsations from the compressor, ensuring a stable pressure level.
+    
+- **Environmental Control:** Its large surface area helps dissipate heat, causing moisture to condense so it can be removed via a **water drain**.
+    
+- **Safety & Monitoring:** Tanks are equipped with **safety relief valves** to prevent over-pressurization, along with **pressure gauges** and **thermometers** for constant monitoring.
+    
+
+### Air Treatment
+
+Before the air can be used, it must be cleaned and cooled to protect sensitive system components.
+
+- **Filtration:** **Inlet filters** remove dust and particles; these include **Dry Filters** (disposable) and **Wet Filters** (which use an oil bath to trap dirt).
+    
+- **Heat Management:** Because compression raises air temperature, **coolers** (air or water-cooled) act as heat exchangers to lower the temperature.
+    
+- **Condensation:** The cooling process helps turn water vapor into liquid, further drying the air to prevent internal system corrosion.
+
+---
+
+## Pneumatic System Components
+
+The following specialized components are used to treat and utilize compressed air within a pneumatic system:
+
+![[Pasted image 20260222121858.png]]
+
+### Lubricator
+
+As a final step in air preparation, the lubricator adds a fine mist of oil to the compressed air.
+
+- **Function:** It reduces friction and wear between the moving parts of the pneumatic actuators and valves.
+    
+- **Mechanism:** Air flow through the unit draws oil from a reservoir via a **siphon tube**, which is then atomized into **oil drops** and distributed as a mist throughout the system.
+    
+
+### Relief Valve
+
+A relief valve acts as a critical safety device to prevent system damage from over-pressurization.
+
+- **Operation:** It remains closed under normal conditions by a **pressure setting spring**.
+    
+- **Safety Action:** If the **source pressure** exceeds the spring's preset limit, the valve opens to **exhaust** the excess air until safe pressure is restored.
+    
+
+### Pneumatic Actuators
+
+Actuators translate the potential energy of compressed air into physical mechanical movement, typically in a linear direction.
+
+- **Single Acting Actuator:**
+    
+    - **Mechanism:** Compressed air is applied to only one side of the **piston** to extend the **piston rod**.
+        
+    - **Return:** Once the air pressure is removed, an internal **spring** automatically retracts the piston back to its original position.
+        
+- **Double Acting Actuator:**
+    
+    - **Mechanism:** This design features two ports: an **extend port** and a **retract port**.
+        
+    - **Action:** Compressed air is applied to one side to push the piston out and then to the opposite side to pull it back in, allowing for controlled, high-force movement in both directions.
+
+---
+
+## Pneumatic Circuit Symbols and Functions
+
+Pneumatic symbols provide a standardized way to represent the function and flow of air through various control components.
+
+### Directional Control Valves (3/2 and 5/2)
+
+These symbols are represented by squares called "ports," where the number of squares indicates the number of positions and the numbers indicate ports/ways.
+
+![[Pasted image 20260222122644.png]]
+
+- **3/2 Valve:** Consists of **3 ports and 2 positions**. It is typically used to control single-acting cylinders, where one port is the inlet, one is the outlet to the actuator, and the third is the exhaust.
+    
+- **5/2 Valve:** Features **5 ports and 2 positions**. This is the standard valve for controlling double-acting cylinders, providing two ports for supply/exhaust to alternate the piston movement.
+    
+
+---
+
+### Control and Safety Valves
+
+- **Flow Control Valve:** This symbol usually depicts a restriction (throttle) and is used to regulate the speed of an actuator by limiting the volume of air passing through.
+
+![[Pasted image 20260222122742.png]]
+    
+- **Non-Return Valve (NRV):** Represented by a ball in a seat, it allows air to flow in only **one direction** and blocks it in the opposite direction to prevent back-pressurization.
+
+![[Pasted image 20260222122726.png]]
+    
+- **Shuttle Valve (OR Gate):** This valve has two inlets and one outlet. It allows the output to be pressurized if **either** of the two input signals is active.
+
+![[Pasted image 20260222122758.png]]
+
+---
+
+### Memory Function
+
+The memory function in pneumatics refers to the ability of a system to "remember" its last commanded state even after the initial signal is removed.
+
+![[Pasted image 20260222122822.png]]
+
+- **Operation:** This is typically achieved using a **double-pilot operated 5/2 directional valve**.
+    
+- **Function:** When a momentary pulse of air hits one side, the valve shifts and **stays in that position** until a pulse is received from the opposite side.
+
+---
+
