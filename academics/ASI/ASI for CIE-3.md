@@ -726,3 +726,6 @@ fig: resistive type mems pressure sensor
 - **Sagnac Effect**: Like the RLG, it measures the time difference between clockwise (CW) and counter-clockwise (CCW) light paths in coils of optical fiber.
 - **Phase Shift**: The rotation induces a phase shift ($\phi_c$) proportional to the number of turns ($N$) and area ($A$): $\phi_c = \frac{8\pi NA\omega}{c\lambda_0}$.
 ---
+
+>**upto class 37 (i guess)**
+

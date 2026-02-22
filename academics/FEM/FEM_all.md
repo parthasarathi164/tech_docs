@@ -872,3 +872,76 @@ $$[M]\{\ddot{u}\} + [C]\{\dot{u}\} + [K]\{u\} = \{F(t)\}$$
 
 ---
 
+## Types of Finite Elements by Geometry
+
+### **1D Elements (Line Elements)**
+
+These are used when one dimension is significantly larger than the others.
+
+- **Bar/Truss Element:** Resists only axial (tension/compression) loads.
+    
+    - _Application:_ Roof trusses, bridges, space frames.
+        
+- **Beam Element:** Resists axial, bending, and sometimes torsional loads.
+    
+    - _Application:_ Building frames, machine shafts, stiffeners in aircraft wings.
+        
+
+### **2D Elements (Surface Elements)**
+
+Used for thin structures or components modeled under plane stress/strain assumptions.
+
+- **Triangular (Tria):** Simple to mesh complex geometries; can be "stiff" in first-order form.
+    
+- **Quadrilateral (Quad):** Generally more accurate and preferred for structural analysis.
+    
+- **Shell Elements:** 2D shapes that account for out-of-plane bending and thickness.
+    
+    - _Application:_ Car body panels, pressure vessels, aircraft skin.
+        
+
+### **3D Elements (Solid Elements)**
+
+Used for "bulky" objects where all three dimensions are comparable.
+
+- **Tetrahedral (Tet):** Essential for automated meshing of highly complex 3D volumes.
+    
+- **Hexahedral (Hex/Brick):** Highly efficient and accurate, but difficult to mesh for irregular shapes.
+    
+    - _Application:_ Engine blocks, turbine blades, thick structural castings.
+        
+
+---
+
+## Element Connectivity and Numbering
+
+Connectivity defines how nodes are linked to form elements, while numbering refers to the specific index assigned to each node and element in the global system.
+
+### **Bandwidth and Profile Minimization**
+
+The global stiffness matrix $[K]$ is sparse (mostly zeros). However, the "spread" of non-zero entries away from the main diagonal is determined by the maximum difference between node numbers in any single element.
+
+- **Impact:** A large difference in connected node numbers (e.g., node 1 connected to node 1000) creates a high **bandwidth**.
+    
+- **Efficiency:** High bandwidth increases the storage memory required and the number of operations needed for matrix factorization (like LU decomposition).
+    
+
+### **Node Numbering Strategies**
+
+To improve computational efficiency, solvers use algorithms to reorder nodes:
+
+- **Cuthill-McKee (CMK) Algorithm:** Reorders nodes to minimize the bandwidth, making the matrix more "tight" around the diagonal.
+    
+- **Frontal Solvers:** These process elements one by one, focusing on "active" nodes, making them less sensitive to global numbering but highly dependent on the order in which **elements** are defined.
+    
+
+### **Summary of Efficiency Factors**
+
+|**Factor**|**Effect on Efficiency**|
+|---|---|
+|**Lower Bandwidth**|Reduces RAM usage and speeds up direct solvers.|
+|**Regular Meshing**|Hex/Quad elements often yield smaller matrices for the same accuracy as Tet/Tria.|
+|**Local Connectivity**|Keeping connected nodes numerically "close" optimizes cache performance in modern CPUs.|
+
+---
+
