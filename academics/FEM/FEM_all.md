@@ -67,7 +67,7 @@ N_2(\xi) = \frac{1 + \xi}{2}
 $$
 So, displacement inside the element is:
 $$
-u(\xi) = N_1(\xi) u_1 + N_2(\xi) u_2
+u(\xi) = N_1(\xi) u_1 + N_2(\xi) u_3
 $$
 
 ### 2. Strain-Displacement
@@ -208,6 +208,7 @@ $$
 - $F_2 = 1{,}000\ \text{N}$
 
 Equation system for free nodes ($u_1$, $u_2$):
+
 $$
 \begin{bmatrix}
 2 & -1 \\
@@ -223,6 +224,7 @@ u_1 \\ u_2
 $$
 
 Or, plugging in $K_e$:
+
 $$
 \begin{bmatrix}
 1.6 \times 10^9 & -8 \times 10^8 \\

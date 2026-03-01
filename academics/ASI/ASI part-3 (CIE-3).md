@@ -390,6 +390,7 @@ This is the "intelligence" of the system, ensuring the engine receives exactly t
 
 - **Simplex Nozzle:** Features a single orifice. Fuel enters a **spin chamber** via tangential holes, creating a high-velocity swirl that exits as a fine mist.
 - **Duplex Nozzle:** Uses two orifices—**Primary and Secondary**. It starts on the Primary only for ignition. At higher RPM (N1), a flow divider valve opens the Secondary for full-power fuel volume.
+
 ---
 ## afterburner
 
@@ -634,6 +635,7 @@ This instrument combines two separate measuring devices on a single face to help
 - **Unbalanced Turns:**
     - **Slipping:** Occurs when there is **too much bank** for the rate of turn; the ball moves toward the inside of the turn.
     - **Skidding:** Occurs when there is **insufficient bank** (too much centrifugal force); the ball is slung toward the outside of the turn.
+
 ---
 ### **Summary Table**
 

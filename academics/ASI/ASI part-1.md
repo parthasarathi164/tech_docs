@@ -182,6 +182,10 @@ A hydraulic accumulator is a critical device in an aircraft system that provides
 
 ### System Diagram and Timing Chart Analysis
 
+![[Pasted image 20260223221732.png]]
+
+![[Pasted image 20260223221737.png]]
+
 The provided schematic and timing chart illustrate how a storage device (accumulator) interacts with system pressure and loading valves:
 
 - **Pressure Management**: Between points **A and B**, the loading valve ($V_2$) is closed, allowing the pump to charge the system and increase the pressure at point **P**.
@@ -323,6 +327,7 @@ For **4-way, 3-position valves**, the center (neutral) position determines fluid
 - **Regenerative Center:** Pump (P) connects to both actuator ports (A, B) simultaneously, while the tank (T) is blocked. This allows for high-speed cylinder extension by routing rod-end fluid back into the piston end.
     
 - **Pilot-Operated Valves:** Use a small "pilot" fluid pressure to move a larger main spool. This allows a small solenoid or manual signal to control very high-flow, high-pressure systems that would otherwise require massive physical force to shift.
+
 ![[Pasted image 20260221133505.png]]
 
 ### Check Valves and Flow Control
@@ -429,12 +434,12 @@ Engineers must account for various ways a system can fail to ensure safety under
 
 ## Aircraft Failure Criticality and Design Standards
 
-|**Failure Criticality**|**Failure Characteristics**|**Probability**|**Design Standard**|**Example (Hydraulic Systems)**|
-|---|---|---|---|---|
-|**Minor**|Normal, Nuisance and/or possibly requiring emergency procedures|Reasonably probable|Not applicable|Single hydraulic system fails|
-|**Major**|Reduction in safety margin, Increased crew work load, may result in injury|Remote|$P \leq 10^{-5}$|Two (out of 3) hydraulic systems fail|
-|**Hazardous**|Extreme reduction in safety margin, Major damage, possible injury/death|Extremely|$P \leq 10^{-7}$|All sources fail, except RAT or APU (e.g., US1549)|
-|**Catastrophic**|Loss of aircraft with multiple deaths|Extremely improbable|$P \leq 10^{-9}$|All hydraulic systems fail (e.g., UA232)|
+| **Failure Criticality** | **Failure Characteristics**                                                | **Probability**      | **Design Standard** | **Example (Hydraulic Systems)**                    |
+| ----------------------- | -------------------------------------------------------------------------- | -------------------- | ------------------- | -------------------------------------------------- |
+| **Minor**               | Normal, Nuisance and/or possibly requiring emergency procedures            | Reasonably probable  | Not applicable      | Single hydraulic system fails                      |
+| **Major**               | Reduction in safety margin, Increased crew work load, may result in injury | Remote               | $P \leq 10^{-5}$    | Two (out of 3) hydraulic systems fail              |
+| **Hazardous**           | Extreme reduction in safety margin, Major damage, possible injury/death    | Extremely            | $P \leq 10^{-7}$    | All sources fail, except RAT or APU (e.g., US1549) |
+| **Catastrophic**        | Loss of aircraft with multiple deaths                                      | Extremely improbable | $P \leq 10^{-9}$    | All hydraulic systems fail (e.g., UA232)           |
 
 ---
 
@@ -498,7 +503,7 @@ This system serves as a specialized backup to ensure safety during equipment fai
     
 - **Redundant Flight Controls (Blue):** Provides secondary power to the **Spoiler**, **Tail Plane**, and **Rudder**, often through artificial stability (A/STAB) actuators.
 
-![[Pasted image 20260221140932.png]]
+![[Pasted image 20260224075527.png]]
 
 ---
 
@@ -890,7 +895,6 @@ Compressed air is housed in an **Air Receiver Tank** to provide a steady, contin
 - **Environmental Control:** Its large surface area helps dissipate heat, causing moisture to condense so it can be removed via a **water drain**.
     
 - **Safety & Monitoring:** Tanks are equipped with **safety relief valves** to prevent over-pressurization, along with **pressure gauges** and **thermometers** for constant monitoring.
-    
 
 ### Air Treatment
 
