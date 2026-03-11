@@ -310,3 +310,6 @@ By completing this project, you'll gain hands-on experience with:
 - Aircraft instrumentation principles[^2][^3][^1]
 
 This project directly relates to real aircraft flight instruments where turn coordinators are critical for maintaining coordinated flight and preventing dangerous slips or skids during turns.[^20][^3][^1]
+
+---
+
