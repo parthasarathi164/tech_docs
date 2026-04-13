@@ -1,0 +1,7 @@
+{
+	"nodes":[
+		{"id":"c4dc04b3592b9b36","type":"file","file":"tech_docs/academics/boeing/requirements.md","x":-640,"y":-446,"width":640,"height":726},
+		{"id":"e5d3bea24761885b","type":"text","text":"# components required\n\n- [ ] optical tachometer\n- [ ] current and voltage sensor\n- [ ] electronic speed controller (ESC)\n- [ ] LiPo battery\n- [ ] microcontroller board\n- [ ] ","x":80,"y":-380,"width":520,"height":660}
+	],
+	"edges":[]
+}
