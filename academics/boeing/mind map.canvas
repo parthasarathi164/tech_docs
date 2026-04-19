@@ -1,7 +1,8 @@
 {
 	"nodes":[
 		{"id":"c4dc04b3592b9b36","type":"file","file":"tech_docs/academics/boeing/requirements.md","x":-640,"y":-446,"width":640,"height":726},
-		{"id":"e5d3bea24761885b","type":"text","text":"# components required\n\n- [ ] optical tachometer\n- [ ] current and voltage sensor\n- [ ] electronic speed controller (ESC)\n- [ ] LiPo battery\n- [ ] microcontroller board\n- [ ] ","x":80,"y":-380,"width":520,"height":660}
+		{"id":"e5d3bea24761885b","type":"text","text":"# components required\n\n- [ ] optical tachometer\n- [ ] current and voltage sensor\n- [ ] electronic speed controller (ESC)\n- [ ] LiPo battery\n- [ ] microcontroller board\n- [ ] load cell\n- [ ] load cell amplifier\n- [ ] ","x":80,"y":-380,"width":520,"height":660},
+		{"id":"ec108022a51b9d6e","type":"text","text":"# concepts for Pugh matrix\n\n- vertically mounted motor axis\n- horizontally mounted motor axis\n- force transformation type\n- similar to SFT stand\n- ","x":-160,"y":-1000,"width":600,"height":494}
 	],
 	"edges":[]
 }
