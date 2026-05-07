@@ -1,4 +1,4 @@
-Here are all the mathematical formulae used in the code:
+# mathematical formulae used in the code:
 
 ---
 
@@ -22,7 +22,7 @@ $$\mu = \arcsin\left(\frac{1}{M}\right)$$
 
 ## 3. Shock Intersection Point
 
-The bottom incident shock travels as a straight line from the origin with slope tan(β_bot), and the top shock from (0, h) with slope −tan(β_top). Setting them equal:
+The bottom incident shock travels as a straight line from the origin with slope $tan(β_bot)$, and the top shock from (0, h) with slope $−tan(β_top)$. Setting them equal:
 
 $$y = \tan(\beta_{\text{bot}}) \cdot x \quad \text{(bottom shock line)}$$
 

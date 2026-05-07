@@ -27,7 +27,7 @@
 
 ---
 
-## iteration 2 of T1
+## T1 iteration 2
 
 ## ✅ Why T1 Should Be Shortened (4 Key Points)
 
