@@ -1,7 +1,5 @@
 # mathematical formulae used in the code:
 
----
-
 ## 1. Theta–Beta–M Relation (Oblique Shock)
 
 The core governing equation relating wedge angle θ, shock wave angle β, and freestream Mach number M:

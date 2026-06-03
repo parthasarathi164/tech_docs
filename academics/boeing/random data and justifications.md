@@ -217,3 +217,17 @@ To maintain a focus on high-fidelity performance data and system simplicity, a *
 - **Safety and Portability:** A battery allows the test bench to remain "electrically floating," reducing the risk of ground loops between the bench and the computer. Additionally, it eliminates the need for bulky, expensive high-current power cables, keeping the **I-base stand** assembly light and mobile as required.
 
 ---
+
+## Technical Justification: Ground Effect Mitigation
+
+In aerodynamic testing, **Ground Effect** refers to the increased thrust and reduced induced drag caused by a propeller’s proximity to a fixed surface, such as the base of a test stand. This proximity restricts the downward airflow, creating an artificial high-pressure "cushion" that skews performance data, making it non-representative of real-world flight conditions.
+
+To ensure the integrity of the data collected, the vertical column height is designed based on the following justifications:
+
+- **Out-of-Ground Effect (OGE) Conditions:** To obtain "clean" aerodynamic data, industry standards require a minimum vertical clearance ($H$) of at least one full propeller diameter ($1D$) from any surface.
+    
+- **Operational Constraint:** For the **10-inch propellers** specified for this project, a minimum clearance of **254 mm** is required between the motor shaft and the base.
+    
+- **Data Fidelity:** Maintaining $H \ge 1D$ ensures that the propeller wake remains unrestricted, allowing for a valid "laboratory comparison to theoretical performance" without the interference of surface-induced pressure changes.
+    
+- **Safety and Measurement Accuracy:** Proper height selection prevents air recirculation from reaching the **1.5 kg thrust** measurement assembly, which would otherwise introduce high-frequency noise and artificial lift into the load cell readings.
