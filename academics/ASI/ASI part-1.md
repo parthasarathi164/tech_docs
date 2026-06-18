@@ -994,4 +994,3 @@ The memory function in pneumatics refers to the ability of a system to "remember
 - **Function:** When a momentary pulse of air hits one side, the valve shifts and **stays in that position** until a pulse is received from the opposite side.
 
 ---
-

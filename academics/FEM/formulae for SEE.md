@@ -153,4 +153,3 @@ For a 1D bar element with a constant traction force $T_x$ (force per unit length
 $$\{f_t\} = \frac{T_x L}{2} \begin{Bmatrix} 1 \\ 1 \end{Bmatrix}$$
 
 ---
-

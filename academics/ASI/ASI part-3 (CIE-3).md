@@ -736,4 +736,3 @@ fig: resistive type mems pressure sensor
 - **Phase Shift**: The rotation induces a phase shift ($\phi_c$) proportional to the number of turns ($N$) and area ($A$): $\phi_c = \frac{8\pi NA\omega}{c\lambda_0}$.
 
 ---
-

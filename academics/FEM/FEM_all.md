@@ -673,13 +673,11 @@ The branch of mechanics that studies the interaction between **aerodynamic** for
 ---
 ## Derivation — Shape functions of a 1-D (Euler–Bernoulli) beam element (Hermite cubic)
 
-> Obsidian-ready Markdown. All math uses `$...$` or `$$...$$`.
-
 ---
 
 ### 1. Problem statement
 For an Euler–Bernoulli beam element of length $L$ aligned with the $x$–axis ($x\in[0,L]$), approximate the transverse displacement $u(x)$ with a cubic polynomial.  
-Nodal DOFs (use translation `$q$` and rotation `$\theta$`):
+Nodal DOFs (use translation $q$ and rotation $\theta$):
 - Node 1: $q_1,\;\theta_1 = u'(0)$  
 - Node 2: $q_2,\;\theta_2 = u'(L)$
 
@@ -946,4 +944,3 @@ To improve computational efficiency, solvers use algorithms to reorder nodes:
 |**Local Connectivity**|Keeping connected nodes numerically "close" optimizes cache performance in modern CPUs.|
 
 ---
-

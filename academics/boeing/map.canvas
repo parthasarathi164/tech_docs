@@ -1,8 +1,0 @@
-{
-	"nodes":[
-		{"id":"ec108022a51b9d6e","type":"text","text":"# concepts for Pugh matrix\n\n- vertically mounted motor axis\n- horizontally mounted motor axis\n- force transformation type\n- similar to SFT stand\n- ","x":-40,"y":-900,"width":600,"height":494},
-		{"id":"efa89d2c185ba200","type":"file","file":"tech_docs/academics/boeing/task_cdr.md","x":-780,"y":-894,"width":715,"height":1114},
-		{"id":"e5d3bea24761885b","type":"text","text":"# components required\n\n- [ ] current and voltage sensor\n- [x] electronic speed controller (ESC)\n- [x] LiPo battery\n- [x] microcontroller board\n- [x] load cell\n- [x] load cell amplifier\n- [ ] connector rod\n- [ ] bearing housing\n- [ ] linear ball bearing\n- [x] motor mounting plate (15-50mm slot)\n- [ ] vertical column\n- [ ] base\n- [ ] ","x":-40,"y":-380,"width":520,"height":660}
-	],
-	"edges":[]
-}

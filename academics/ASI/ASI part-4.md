@@ -322,4 +322,3 @@ When designing hardware that interfaces with aircraft power—such as an STM32-b
 - **Corrosion Control:** Technicians inspect the battery tray for acid/alkali spills. Neutralizing agents (baking soda for lead-acid; vinegar/boric acid for Ni-Cd) are used to clean the area before applying anti-corrosion compounds to the terminals. _Crucially, lead-acid and Ni-Cd batteries must be serviced in entirely separate rooms to prevent cross-contamination of their respective acid and alkaline chemistries._
 
 ---
-

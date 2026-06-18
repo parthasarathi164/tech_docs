@@ -1678,4 +1678,3 @@ The provided block diagram illustrates the integrated flow of conditioned air fo
 - **Emergency & Ground Inputs:** The system includes a **Low Pressure (LP) Ground Inlet** for airport use and an **Emergency Ram Air Inlet** for inflight smoke removal or cooling failures.
 
 ---
-
