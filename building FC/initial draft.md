@@ -186,6 +186,3 @@ You can upload your `.bin` file instantly. There is no waiting for a "bootloader
 ### A Small Warning for your Hardware
 
 Since you are using Windows 11, if the ST-Link isn't recognized, you may need to update the **ST-Link Firmware** itself. You can do this within the STM32CubeProgrammer tool by clicking the **"ST-LINK Upgrade"** button.
-
----
-
