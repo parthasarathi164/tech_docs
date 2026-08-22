@@ -62,11 +62,6 @@
     
 31. Derive the **equation for load factor in level turning flight** (sometimes presented as the same as item 26—kept as single concept).
     
-
----
-
 ## YouTube video for V-n diagram
 
 [YouTube video link](https://youtu.be/J8nfBAzWcGA)
-
----

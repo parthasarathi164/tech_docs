@@ -1,4 +1,4 @@
-## MOI for common sections
+## Area MOI for common sections
 
 Rectangle:
 $I = \frac{b h^3}{12}$

@@ -115,5 +115,3 @@ If it's still too jittery, change it to a smaller number, like 0.05.
 To get a true, stable compass heading, you need a 3rd sensor: a **Magnetometer** (which would make it a 9-axis sensor).
 
 **Without a magnetometer, a 6-axis sensor CANNOT know its absolute compass heading.**
-
----
