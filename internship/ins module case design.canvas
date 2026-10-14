@@ -1,7 +1,0 @@
-{
-	"nodes":[
-		{"id":"75dff5a08792ed8d","type":"file","file":"tech_docs/internship/non metallic case modules.md","x":280,"y":-480,"width":680,"height":640},
-		{"id":"c7e86169fa2c9fb2","type":"file","file":"tech_docs/internship/IMU companies.md","x":-280,"y":-480,"width":540,"height":560}
-	],
-	"edges":[]
-}
